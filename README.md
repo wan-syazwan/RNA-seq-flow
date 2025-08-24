@@ -16,3 +16,26 @@ Install dependencies (Debian/Ubuntu example):
 sudo apt update
 sudo apt install fastqc bowtie2 samtools
 # fastp, sra-tools, subread may require conda or manual install
+```
+
+Or use conda:
+```bash
+conda install -c bioconda sra-tools fastqc fastp bowtie2 samtools subread
+```
+
+## Usage
+
+1. Place your reference genome (.fna and .gtf) in `~/refgen/` or define your files path.
+2. Prepare a list of SRR accession numbers in `SRR_acc_list.txt`.
+3. Run the pipeline:
+```bash rnaseq_flow.sh```
+
+## Output
+
+`fastq/` → raw FASTQ
+`fastqc/` → quality reports
+`trimmed/` → trimmed FASTQ
+`bowtie_output/` → SAM alignments
+`bam_sorted/` → sorted BAM
+`bam_index/` → BAM index
+`featurecounts_output/` → raw read counts
