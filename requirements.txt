@@ -1,0 +1,6 @@
+sra-tools
+fastqc
+fastp
+bowtie2
+samtools
+subread
