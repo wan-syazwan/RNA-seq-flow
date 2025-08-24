@@ -1,13 +1,13 @@
 #!/bin/bash
 # RNA-seq pipeline: SRA download → QC → trimming → alignment → BAM → read count
-# Author: wansyazwan
+# Author: Wan Amirul Syazwan, Amin Abdurrahman
 # Date: 24 August 2025
 
 set -euo pipefail
 
 # === INPUT FILES ===
 # SRR_acc_list.txt should contain one SRR accession per line
-# Reference genome (.fna) and annotation (.gtf) should be in ~/refgen/
+# Reference genome (.fna) and annotation (.gtf) should be in ~/refgen/ or your reference genome path.
 
 SRR_LIST="SRR_acc_list.txt"
 REF_FASTA=~/refgen/GCF_000008865.2_ASM886v2_genomic.fna
